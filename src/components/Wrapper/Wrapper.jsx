@@ -1,13 +1,14 @@
-import { Container } from "./Wrapper.styles"
-import Sidebar from "../Sidebar/Sidebar"
-import Main from "../Main/Main"
+import React from "react";
+import Sidebar from "../Sidebar/Sidebar";
+import Main from "../Main/Main";
+import { Container } from "./Wrapper.styles";
+const Wrapper = () => {
+  return (
+    <Container>
+      <Sidebar />
+      <Main />
+    </Container>
+  );
+};
 
-
-export default function Wrapper() {
-    return (
-        <Container>
-            <Sidebar />
-            <Main></Main>
-        </Container>
-    )
-}
+export default Wrapper;

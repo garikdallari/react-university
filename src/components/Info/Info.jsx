@@ -1,14 +1,18 @@
-import React from 'react'
-import { Description } from './Info.styles'
-import Paper from '../Paper/Paper'
-import Card from '../Card/Card'
+import React from "react";
+import Card from "../Card/Card";
+import data from "../../data/university.json";
+import { Container, Text } from "./Info.styles";
+import Paper from "../Paper/Paper";
 
-export default function Info() {
-    return (
-        <Description>
-            <Paper gap="24">
-               <Card/>
-            </Paper>
-        </Description>
-    )
+function Info() {
+  return (
+    <Container>
+      <Card name={data.name} />
+      <Paper gap={32}>
+        <Text>{data.description}</Text>
+      </Paper>
+    </Container>
+  );
 }
+
+export default Info;
